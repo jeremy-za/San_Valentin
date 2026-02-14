@@ -4,59 +4,31 @@ from PIL import Image
 # Configuración de la página
 st.set_page_config(page_title="San Valentín 💜", page_icon="💜", layout="wide")
 
-# Estilos personalizados con CSS
+# Fondo lila suave con CSS
 st.markdown("""
     <style>
-    .timeline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+    body {
+        background-color: #f3e6f9; /* tono lila suave */
     }
-    .timeline::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        background-color: #B565A7;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -2px;
-    }
-    .container {
-        padding: 20px;
-        position: relative;
-        width: 50%;
-    }
-    .left {
-        left: 0;
-    }
-    .right {
-        left: 50%;
+    .message {
+        color: #6A0DAD;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
     }
     .content {
-        background-color: #f9f9f9;
-        padding: 15px;
+        background-color: #ffffff;
+        padding: 10px;
         border-radius: 10px;
         border: 2px solid #B565A7;
         box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
-    .content img {
-        width: 100%;
-        border-radius: 10px;
-    }
-    .message {
-        text-align: center;
-        color: #6A0DAD;
-        font-size: 18px;
-        margin-top: 10px;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # Encabezado principal
 st.markdown("<h1 style='text-align: center; color: #6A0DAD;'>Nuestra Historia 💕</h1>", unsafe_allow_html=True)
-st.write("Un recorrido por nuestros momentos más especiales, paso a paso 💜")
+st.write("Un recorrido por nuestros momentos más especiales 💜")
 
 # Lista de imágenes y mensajes con carpeta Fotitos
 imagenes = [
@@ -69,19 +41,23 @@ imagenes = [
     ("Fotitos/Foto7.jpeg", "Siempre tú, siempre nosotros 💜")
 ]
 
-# Renderizado de la línea de tiempo
-st.markdown("<div class='timeline'>", unsafe_allow_html=True)
-
+# Renderizado intercalado
 for i, (ruta, mensaje) in enumerate(imagenes):
-    lado = "left" if i % 2 == 0 else "right"
-    st.markdown(f"<div class='container {lado}'><div class='content'>", unsafe_allow_html=True)
+    col1, col2 = st.columns([1, 1])
     img = Image.open(ruta)
-    st.image(img, use_column_width=True)
-    st.markdown(f"<p class='message'>{mensaje}</p>", unsafe_allow_html=True)
-    st.markdown("</div></div>", unsafe_allow_html=True)
 
-st.markdown("</div>", unsafe_allow_html=True)
+    if i % 2 == 0:
+        # Imagen izquierda, texto derecha
+        with col1:
+            st.image(img, width=250)  # imagen más pequeña
+        with col2:
+            st.markdown(f"<div class='content'><p class='message'>{mensaje}</p></div>", unsafe_allow_html=True)
+    else:
+        # Texto izquierda, imagen derecha
+        with col1:
+            st.markdown(f"<div class='content'><p class='message'>{mensaje}</p></div>", unsafe_allow_html=True)
+        with col2:
+            st.image(img, width=250)
 
 # Mensaje final
 st.markdown("<h2 style='text-align: center; color: #B565A7;'>Gracias por ser parte de mi vida 💖</h2>", unsafe_allow_html=True)
-
