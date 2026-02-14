@@ -28,12 +28,14 @@ st.markdown("""
 
 # Encabezado principal
 st.markdown("<h1 style='text-align: center; color: #6A0DAD;'>Nuestra Historia 💕</h1>", unsafe_allow_html=True)
-st.write("Un recorrido por nuestros momentos más especiales 💜")
+st.markdown(
+    "<p style='color: black; font-size: 18px; text-align: center;'>Un recorrido por nuestros momentos más especiales 💜</p>",
+    unsafe_allow_html=True
+)
 
 # Lista de imágenes y mensajes con carpeta Fotitos
 imagenes = [
-    ("Fotitos/Foto1.jpeg", "El inicio de nuestra aventura ✨"),
-    ("Fotitos/Foto2.jpeg", "Descubriendo juntos nuevos caminos 🌸"),
+    ("Fotitos/Foto2.jpeg", "Que hermoso volver a coincidir contigo, y más increíble aún fue compartir tantas cosas 🌸"),
     ("Fotitos/Foto3.jpeg", "Risas que iluminan mis días 💫"),
     ("Fotitos/Foto4.jpeg", "Pequeños detalles que significan tanto 💕"),
     ("Fotitos/Foto5.jpeg", "Momentos que guardo en mi corazón 🎁"),
