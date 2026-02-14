@@ -8,23 +8,20 @@ st.set_page_config(page_title="San Valentín 💜", page_icon="💜", layout="wi
 st.markdown("""
     <style>
     .stApp {
-        background-color: #f3e6f9; /* fondo lila claro */
+        background-color: #f3e6f9; /* tono lila claro */
     }
-    .message-box {
-        display: flex;
-        align-items: center; /* centra verticalmente */
-        justify-content: center; /* centra horizontalmente */
-        height: 250px; /* igual altura que la imagen */
-        background-color: #ffffff;
-        border: 2px solid #B565A7;
-        border-radius: 10px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-        padding: 10px;
-    }
-    .message-text {
-        color: black;
+    .message {
+        color: #6A0DAD;
         font-size: 18px;
         text-align: center;
+        margin-top: 10px;
+    }
+    .content {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #B565A7;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
     </style>
 """, unsafe_allow_html=True)
