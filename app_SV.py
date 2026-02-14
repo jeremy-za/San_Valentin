@@ -8,36 +8,8 @@ st.set_page_config(page_title="San Valentín 💜", page_icon="💜", layout="wi
 st.markdown("""
     <style>
     .stApp {
-        background-color: #f3e6f9; /* tono lila claro */
-        
-        position: relative;
-        overflow: hidden;
+        background-color: #f3e6f9; /* fondo lila claro */
     }
-        /* Estrellitas */
-    .star {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: white;
-        border-radius: 50%;
-        animation: twinkle 2s infinite;
-    }
-
-    @keyframes twinkle {
-        0% { opacity: 0.2; }
-        50% { opacity: 1; }
-        100% { opacity: 0.2; }
-    }
-
-    /* Distribución de varias estrellas */
-    .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-    .star:nth-child(2) { top: 30%; left: 70%; animation-delay: 0.5s; }
-    .star:nth-child(3) { top: 50%; left: 40%; animation-delay: 1s; }
-    .star:nth-child(4) { top: 70%; left: 80%; animation-delay: 1.5s; }
-    .star:nth-child(5) { top: 85%; left: 15%; animation-delay: 2s; }
-    .star:nth-child(6) { top: 20%; left: 90%; animation-delay: 2.5s; }
-    .star:nth-child(7) { top: 60%; left: 10%; animation-delay: 3s; }
-
     .message-box {
         display: flex;
         align-items: center; /* centra verticalmente */
@@ -55,15 +27,6 @@ st.markdown("""
         text-align: center;
     }
     </style>
-
-    <!-- Estrellitas en el fondo -->
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
 """, unsafe_allow_html=True)
 
 # Encabezado principal
