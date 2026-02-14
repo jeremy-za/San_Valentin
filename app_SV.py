@@ -18,7 +18,7 @@ st.markdown("""
     }
     .content {
         background-color: #ffffff;
-        padding: 12px;
+        padding: 11px;
         border-radius: 10px;
         border: 2px solid #B565A7;
         box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -27,9 +27,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Encabezado principal
-st.markdown("<h1 style='text-align: center; color: #6A0DAD;'>Nuestra Historia 💕</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #6A0DAD;'>💕 Nuestra Historia 💕</h1>", unsafe_allow_html=True)
 st.markdown(
-    "<p style='color: black; font-size: 18px; text-align: center;'>Un recorrido por nuestros momentos más especiales 💜</p>",
+    "<p style='color: black; font-size: 18px; text-align: center;'>Un pequeño recorrido por nuestros momentos más especiales 💜</p>",
     unsafe_allow_html=True
 )
 
@@ -62,4 +62,5 @@ for i, (ruta, mensaje) in enumerate(imagenes):
             st.image(img, width=250)
 
 # Mensaje final
-st.markdown("<h2 style='text-align: center; color: #B565A7;'>Gracias por ser parte de mi vida 💖</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #B565A7;'>Gracias por ser parte de mi vida, amochito.</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #B565A7;'>💖 ¡Feliz San Valentin! 💖</h2>", unsafe_allow_html=True)
