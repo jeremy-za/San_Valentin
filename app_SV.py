@@ -58,15 +58,15 @@ st.markdown("""
 st.markdown("<h1 style='text-align: center; color: #6A0DAD;'>Nuestra Historia 💕</h1>", unsafe_allow_html=True)
 st.write("Un recorrido por nuestros momentos más especiales, paso a paso 💜")
 
-# Lista de imágenes y mensajes
+# Lista de imágenes y mensajes con carpeta Fotitos
 imagenes = [
-    ("images/img1.jpg", "El inicio de nuestra aventura ✨"),
-    ("images/img2.jpg", "Descubriendo juntos nuevos caminos 🌸"),
-    ("images/img3.jpg", "Risas que iluminan mis días 💫"),
-    ("images/img4.jpg", "Pequeños detalles que significan tanto 💕"),
-    ("images/img5.jpg", "Momentos que guardo en mi corazón 🎁"),
-    ("images/img6.jpg", "Sueños que construimos juntos 🌙"),
-    ("images/img7.jpg", "Siempre tú, siempre nosotros 💜")
+    ("Fotitos/Foto1.jpeg", "El inicio de nuestra aventura ✨"),
+    ("Fotitos/Foto2.jpeg", "Descubriendo juntos nuevos caminos 🌸"),
+    ("Fotitos/Foto3.jpeg", "Risas que iluminan mis días 💫"),
+    ("Fotitos/Foto4.jpeg", "Pequeños detalles que significan tanto 💕"),
+    ("Fotitos/Foto5.jpeg", "Momentos que guardo en mi corazón 🎁"),
+    ("Fotitos/Foto6.jpeg", "Sueños que construimos juntos 🌙"),
+    ("Fotitos/Foto7.jpeg", "Siempre tú, siempre nosotros 💜")
 ]
 
 # Renderizado de la línea de tiempo
@@ -84,3 +84,4 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 # Mensaje final
 st.markdown("<h2 style='text-align: center; color: #B565A7;'>Gracias por ser parte de mi vida 💖</h2>", unsafe_allow_html=True)
+
