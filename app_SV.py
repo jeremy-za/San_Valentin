@@ -39,9 +39,8 @@ st.markdown(
 # Lista de imágenes y mensajes con carpeta Fotitos
 imagenes = [
     ("Fotitos/Foto2.jpeg", "Que hermoso volver a coincidir contigo, y más increíble aún fue la oportunidad de conocernos y así cultivar algo tan hermoso que hasta hoy atesoro. 🌸"),
-    ("Fotitos/Foto3.jpeg", "Que las aventuras vividas sean el punto de partida para todas las cosas que quiero pasar a tu lado. A donde sea, pero siempre a tu lado 💫"),
+    ("Fotitos/Foto3.jpeg", "Que las aventuras vividas sean el punto de partida para todas las cosas que quiero pasar a tu lado. A donde sea, pero siempre a tu lado 🏕️"),
     ("Fotitos/Foto4.jpeg", "Amar pasar tiempo juntos ya es algo habitual en nosotros, pero sin duda, nunca dajaremos de apreciarlo. 💕"),
-    ("Fotitos/Foto5.jpeg", "Acompañarnos en cada locura  🎁"),
     ("Fotitos/Foto6.jpeg", "Acompañarnos en cada locura es sin duda la prueba de amor más hermoso que puede existir, compartir momentos especiales a tu lado no tiene comparación. 💛"),
     ("Fotitos/Foto7.jpeg", "Siempre tú, siempre nosotros 💜")
 ]
