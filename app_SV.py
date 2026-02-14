@@ -3,7 +3,7 @@ from PIL import Image
 
 # Configuración de la página
 st.set_page_config(page_title="San Valentín 💜", page_icon="💜", layout="wide")
-
+##6A0DAD
 # Fondo lila claro y estilos personalizados
 st.markdown("""
     <style>
@@ -11,7 +11,7 @@ st.markdown("""
         background-color: #f3e6f9; /* tono lila claro */
     }
     .message {
-        color: #6A0DAD;
+        color: #ffffff; 
         font-size: 18px;
         text-align: center;
         margin-top: 10px;
