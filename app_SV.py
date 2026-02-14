@@ -10,18 +10,21 @@ st.markdown("""
     .stApp {
         background-color: #f3e6f9; /* tono lila claro */
     }
-    .message {
-        color: #6A0DAD; 
+     .message-box {
+        display: flex;
+        align-items: center; /* centra verticalmente */
+        justify-content: center; /* centra horizontalmente */
+        height: 250px; /* igual altura que la imagen */
+        background-color: #ffffff;
+        border: 2px solid #B565A7;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        padding: 10px;
+    }
+    .message-text {
+        color: black;
         font-size: 18px;
         text-align: center;
-        margin-top: 10px;
-    }
-    .content {
-        background-color: #ffffff;
-        padding: 11px;
-        border-radius: 10px;
-        border: 2px solid #B565A7;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
     </style>
 """, unsafe_allow_html=True)
@@ -51,13 +54,13 @@ for i, (ruta, mensaje) in enumerate(imagenes):
     if i % 2 == 0:
         # Imagen izquierda, texto derecha
         with col1:
-            st.image(img, width=250)  # imagen más pequeña
+            st.image(img, width=250)
         with col2:
-            st.markdown(f"<div class='content'><p class='message'>{mensaje}</p></div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='message-box'><p class='message-text'>{mensaje}</p></div>", unsafe_allow_html=True)
     else:
         # Texto izquierda, imagen derecha
         with col1:
-            st.markdown(f"<div class='content'><p class='message'>{mensaje}</p></div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='message-box'><p class='message-text'>{mensaje}</p></div>", unsafe_allow_html=True)
         with col2:
             st.image(img, width=250)
 
